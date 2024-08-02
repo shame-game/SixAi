@@ -1,4 +1,4 @@
-@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 html {
     overflow-x: hidden;
@@ -9,7 +9,7 @@ html {
 body {
     overflow-x: hidden;
     width: 100%;
-    font-family: open sans, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0;
@@ -17,6 +17,12 @@ body {
     font-weight: 400;
     background-color: #fff;
     color: #6f6b80
+}
+
+span,
+h3,
+a {
+    font-family: "Inter" !important;
 }
 
 svg {
@@ -524,7 +530,7 @@ h6 {
     clear: both;
     float: left;
     position: relative;
-    margin-bottom: 190px
+    margin-bottom: 100px
 }
 
 .dizme_tm_hero .background {
@@ -924,7 +930,11 @@ h6 {
 }
 
 .dizme_tm_about .left .image img {
-    max-height: 800px
+    max-height: 800px;
+    aspect-ratio: 13/16;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .dizme_tm_about .numbers {
@@ -945,9 +955,9 @@ h6 {
     display: flex;
     align-items: center;
     background-color: #fff;
-    box-shadow: 25px 0 65px rgba(54, 32, 152, .11);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 8px;
-    padding: 34px 40px 31px 36px
+    padding: 20px 30px 20px 30px
 }
 
 .dizme_tm_about .numbers.project .wrapper {
@@ -2801,7 +2811,7 @@ input[type=number] {
     clear: both;
     float: left;
     background-color: #f2f5fb;
-    padding: 57px 0 61px
+    padding: 20px 0
 }
 
 .dizme_tm_copyright .inner {
@@ -3153,7 +3163,7 @@ input[type=number] {
     }
 
     .dizme_tm_header {
-        padding: 15px 0
+        padding: 20px 0
     }
 
     .dizme_tm_header.animate {
@@ -3165,8 +3175,8 @@ input[type=number] {
     }
 
     .dizme_tm_header .logo img {
-        max-width: 110px;
-        max-height: 70px
+        max-width: 130px;
+        max-height: 90px
     }
 
     .dizme_tm_header .menu ul li {
@@ -3767,6 +3777,10 @@ input[type=number] {
 }
 
 @media(max-width:768px) {
+    .dizme_tm_services .service_list ul li {
+        height: 160px;
+    }
+
     .dizme_tm_hero .avatar img {
         max-width: 220px;
         max-height: 220px
@@ -3960,4 +3974,37 @@ input[type=number] {
     .dizme_tm_contact {
         margin-bottom: 120px
     }
+}
+
+/* event */
+
+.c661412b2-background_click {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.c661412b2-iframe_click {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: max-content;
+    z-index: 9999;
+    border-radius: 16px;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.c661412b2-iframe_click>iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
 }
